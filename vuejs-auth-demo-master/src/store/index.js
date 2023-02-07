@@ -41,8 +41,6 @@ const store = createStore({
       state.status = status;
     },
     logUser: function (state, user) {
-      console.log('user=',user)
-      console.log('string',JSON.stringify(user))
       localStorage.setItem('user', user);
       state.user = user;
     },
@@ -107,16 +105,13 @@ const store = createStore({
       });
     },
     getUserInfos: ({commit}) => {
-      console.log('coucou');
       instance.get('/me', {
         headers: {
           'Authorization' : 'Bearer ' + localStorage.getItem('token'),
         }
       },)
       .then(function (response) {
-        console.log('coucou!')
         commit('userInfos', response.data);
-        console.log('coucou!!!')
       })
       .catch(function () {
       });
