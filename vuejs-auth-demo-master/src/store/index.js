@@ -53,6 +53,8 @@ const store = createStore({
         token: '',
       }
       localStorage.removeItem('user');
+      localStorage.removeItem('username');
+      localStorage.removeItem('token');
     }
   },
   actions: {
