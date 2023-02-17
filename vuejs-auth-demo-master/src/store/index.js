@@ -3,10 +3,10 @@ import { createStore } from 'vuex'
 const axios = require('axios');
 
 const instance = axios.create({
-  baseURL: 'https://alison-ly-ccc-esilv.onrender.com/users/'
+  baseURL: 'https://alison-ly-ccc.onrender.com/users/'
 });
 const instance2 = axios.create({
-  baseURL: 'https://alison-ly-ccc-esilv.onrender.com/locations/'
+  baseURL: 'https://alison-ly-ccc.onrender.com/locations/'
 });
 
 let user = localStorage.getItem('user');
