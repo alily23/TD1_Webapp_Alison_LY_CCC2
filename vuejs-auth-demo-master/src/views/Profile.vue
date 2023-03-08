@@ -3,7 +3,7 @@
     <h1 class="card__title">Espace Perso</h1>
     <br>
     <p class="welcome_title"> Bonjour {{username}} ! </p>
-    <h2 class="card__title2"> Locations </h2>
+    <h2 class="card__title2"> Films </h2>
     <br>
 
     <div class="form-row">
@@ -22,13 +22,13 @@ export default {
   name: 'Profile',
   data: function () {
     return {
-      locations:[],
+      films:[],
       username: localStorage.getItem('username'),
     }
   },
   mounted() {
     this.create()
-    this.locations = localStorage.getItem('locations')
+    this.films = localStorage.getItem('films')
     if (this.$store.state.user.userId == -1) {
       this.$router.push('/');
       return ;
@@ -47,7 +47,7 @@ export default {
     },
 
     create: function () {
-      return this.$store.dispatch('locations')
+      return this.$store.dispatch('films')
     },
   }
 }

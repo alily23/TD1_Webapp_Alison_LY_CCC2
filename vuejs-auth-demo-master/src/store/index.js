@@ -6,7 +6,7 @@ const instance = axios.create({
   baseURL: 'https://alison-ly-ccc.onrender.com/users/'
 });
 const instance2 = axios.create({
-  baseURL: 'https://alison-ly-ccc.onrender.com/locations/'
+  baseURL: 'https://alison-ly-ccc.onrender.com/recommandations/'
 });
 
 let user = localStorage.getItem('user');
@@ -59,14 +59,14 @@ const store = createStore({
   },
   actions: {
 
-    locations: () => {
+    films: () => {
       return new Promise((resolve, reject) => {
         instance2.get('/', {
           headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token'),
           }
         },).then(function (response) {
-          localStorage.setItem('locations', JSON.stringify(response.data))
+          localStorage.setItem('films', JSON.stringify(response.data))
           resolve(response)
         }).catch(function (error) {
           reject(error)
