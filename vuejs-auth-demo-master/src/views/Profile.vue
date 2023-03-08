@@ -6,6 +6,8 @@
     <h2 class="card__title2"> Films </h2>
     <br>
 
+    <img src="assets/avatar.jpg" alt="Avatar">
+
     <div class="form-row">
       <button @click="logout()" class="button">
         Déconnexion
