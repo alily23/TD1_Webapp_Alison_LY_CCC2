@@ -66,7 +66,7 @@ const store = createStore({
             'Authorization': 'Bearer ' + localStorage.getItem('token'),
           }
         },).then(function (response) {
-          localStorage.setItem('films', response.data.json())
+          localStorage.setItem('films', response.data.json)
           resolve(response)
         }).catch(function (error) {
           reject(error)
