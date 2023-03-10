@@ -11,7 +11,7 @@
     <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:100px;height:150px;">
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
-    <div v-for="index in [0,films.length]" :key="index">
+    <li v-for="film in films" :key="film.filmName">
       <h3> {{ film }} </h3>
       <div class="img-container">
         <img v-bind:src='film.image' alt="">
@@ -20,7 +20,7 @@
         <h3>{{ film.filmName }}</h3>
         <span> {{ film.note }}</span>
       </div>
-    </div>
+    </li>
 
     <div class="form-row">
       <button @click="logout()" class="button">
