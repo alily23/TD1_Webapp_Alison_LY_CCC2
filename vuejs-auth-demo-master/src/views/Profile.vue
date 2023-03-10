@@ -15,7 +15,7 @@
       <div v-for="(film, index) in filmsData" :key="index">
         <h2> {{ film.filmName }} </h2>
         <div class="img-container">
-          <img v-bind:src='film.image' alt="">
+          <img v-bind:src="film.image" alt="">
         </div>
         <div class="card-text">
           <h3>{{ film.filmName }}</h3>
