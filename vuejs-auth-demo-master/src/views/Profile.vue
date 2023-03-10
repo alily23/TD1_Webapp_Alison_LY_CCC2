@@ -12,7 +12,7 @@
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
     <div v-if="films.length">
-      <div v-for="(film, index) in filmsData()" :key="index">
+      <div v-for="(film, index) in filmsData" :key="index">
         <h3> {{ film }} </h3>
         <div class="img-container">
           <img v-bind:src='film.image' alt="">
@@ -59,14 +59,14 @@ export default {
   computed: {
     ...mapState({
       user: 'userInfos',
-    })
-  },
+    }),
   filmsData() {
     if (this.films.length) {
       return this.films;
     } else {
       return [];
     }
+  },
   },
   methods: {
     logout: function () {
