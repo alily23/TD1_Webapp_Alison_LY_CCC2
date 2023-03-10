@@ -6,7 +6,7 @@
     <h2 class="card__title2"> Films </h2>
     <br>
 
-    <img src="assets/avatar.png" alt="Avatar">
+    <img src="avatar.png" alt="Avatar">
 
     <div class="form-row">
       <button @click="logout()" class="button">
