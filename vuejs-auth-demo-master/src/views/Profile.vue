@@ -6,11 +6,11 @@
     <h2 class="card__title2"> Films </h2>
     <br>
 
-    <img src='../assets/avatar.png' alt="Avatar" style="width:500px;height:700px;">
-    <img src='../assets/avengers.png' alt="Avatar" style="width:500px;height:700px;">
-    <img src='../assets/bladerunner.png' alt="Avatar" style="width:500px;height:700px;">
-    <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:500px;height:700px;">
-    <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:500px;height:700px;">
+    <img src='../assets/avatar.png' alt="Avatar" style="width:50px;height:80px;">
+    <img src='../assets/avengers.png' alt="Avatar" style="width:50px;height:80px;">
+    <img src='../assets/bladerunner.png' alt="Avatar" style="width:50px;height:80px;">
+    <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:50px;height:80px;">
+    <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:50px;height:80px;">
 
     <div class="form-row">
       <button @click="logout()" class="button">
