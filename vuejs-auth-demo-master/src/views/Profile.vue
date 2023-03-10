@@ -11,7 +11,7 @@
     <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:100px;height:150px;">
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
-    <div v-for="film in films" :key="film.filmName">
+    <div v-for="index in [0,films.length]" :key="index">
       <h3> {{ film }} </h3>
       <div class="img-container">
         <img v-bind:src='film.image' alt="">
