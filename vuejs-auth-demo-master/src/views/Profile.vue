@@ -17,7 +17,7 @@
         <img v-bind:src='film.image' alt="">
       </div>
       <div class="card-text">
-        <h3>Directed by {{ film.filmName }}</h3>
+        <h3>{{ film.filmName }}</h3>
         <span> {{ film.note }}</span>
       </div>
     </div>
