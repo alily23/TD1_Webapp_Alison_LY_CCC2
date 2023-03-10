@@ -11,14 +11,16 @@
     <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:100px;height:150px;">
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
-    <div v-for="(film, index) in films" :key="index">
-      <h3> {{ film }} </h3>
-      <div class="img-container">
-        <img v-bind:src='film.image' alt="">
-      </div>
-      <div class="card-text">
-        <h3>{{ film.filmName }}</h3>
-        <span> {{ film.note }}</span>
+    <div v-if="films.length">
+      <div v-for="(film, index) in films" :key="index">
+        <h3> {{ film }} </h3>
+        <div class="img-container">
+          <img v-bind:src='film.image' alt="">
+        </div>
+        <div class="card-text">
+          <h3>{{ film.filmName }}</h3>
+          <span> {{ film.note }}</span>
+        </div>
       </div>
     </div>
 
