@@ -11,6 +11,16 @@
     <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:100px;height:150px;">
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
+    <div v-for="film in films" :key="film._id">
+      <div class="img-container">
+        <img v-bind:src="film.image" alt="">
+      </div>
+      <div class="card-text">
+        <h3>{{ film.filmName }}</h3>
+        <span> {{ film.note }}</span>
+      </div>
+    </div>
+
     <div class="form-row">
       <button @click="logout()" class="button">
         Déconnexion
@@ -54,6 +64,17 @@ export default {
     create: function () {
       return this.$store.dispatch('films')
     },
+
+    /*searchfilm(movie): function() {
+      let id;
+      let film = this.films[0];
+      for (film in this.films) {
+        if(film.filmName == movie) {
+          id == _id;
+        }
+      }
+      return id;
+    }*/
   }
 }
 
