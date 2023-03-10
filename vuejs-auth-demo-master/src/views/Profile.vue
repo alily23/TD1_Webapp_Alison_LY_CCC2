@@ -11,9 +11,9 @@
     <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:100px;height:150px;">
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
-    <div v-for="film in localStorage.films" :key="film._id">
+    <div v-for="film in films" :key="film._id">
       <div class="img-container">
-        <img v-bind:src="film.image" alt="">
+        <img v-bind:src='film.image' alt="">
       </div>
       <div class="card-text">
         <h3>{{ film.filmName }}</h3>
