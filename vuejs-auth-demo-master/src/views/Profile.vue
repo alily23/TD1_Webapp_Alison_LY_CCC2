@@ -12,6 +12,7 @@
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
     <div v-for="film in films" :key="film._id">
+      <h3> bonjour </h3>
       <div class="img-container">
         <img v-bind:src='film.image' alt="">
       </div>
