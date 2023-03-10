@@ -12,7 +12,7 @@
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
     <div v-if="films.length">
-      <div v-for="(film, index) in films" :key="index">
+      <div v-for="(film, index) in filmsData" :key="index">
         <h3> {{ film }} </h3>
         <div class="img-container">
           <img v-bind:src='film.image' alt="">
@@ -22,6 +22,9 @@
           <span> {{ film.note }}</span>
         </div>
       </div>
+    </div>
+    <div v-else>
+      Loading...
     </div>
 
     <div class="form-row">
@@ -40,7 +43,7 @@ export default {
   name: 'Profile',
   data: function () {
     return {
-      films:[],
+      films: [],
       username: localStorage.getItem('username'),
     }
   },
@@ -49,7 +52,7 @@ export default {
     this.films = localStorage.getItem('films')
     if (this.$store.state.user.userId == -1) {
       this.$router.push('/');
-      return ;
+      return;
     }
     this.$store.dispatch('getUserInfos');
   },
@@ -57,6 +60,13 @@ export default {
     ...mapState({
       user: 'userInfos',
     })
+  },
+  filmsData() {
+    if (this.films.length) {
+      return this.films;
+    } else {
+      return [];
+    }
   },
   methods: {
     logout: function () {
