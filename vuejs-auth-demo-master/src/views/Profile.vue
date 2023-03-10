@@ -12,7 +12,7 @@
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
     <div v-for="(film, index) in films" :key="index">
-      <h3> {{ film.filmName }} </h3>
+      <h3> {{ film }} </h3>
       <div class="img-container">
         <img v-bind:src='film.image' alt="">
       </div>
