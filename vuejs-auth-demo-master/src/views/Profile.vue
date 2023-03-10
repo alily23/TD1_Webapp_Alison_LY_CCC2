@@ -15,7 +15,6 @@
     <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:100px;height:150px;">
     <p style="margin-bottom:20px;">
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
-    <p style="margin-bottom:20px;">
 
     <div class="form-row">
       <button @click="logout()" class="button">
