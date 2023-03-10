@@ -6,13 +6,9 @@
     <h2 class="card__title2"> Films </h2>
     <br>
     <img src='../assets/avatar.png' alt="Avatar" style="width:100px;height:150px;">
-    <p>&nbsp;</p>
     <img src='../assets/avengers.png' alt="Avatar" style="width:100px;height:150px;">
-    <p>&nbsp;</p>
     <img src='../assets/bladerunner.png' alt="Avatar" style="width:100px;height:150px;">
-    <p>&nbsp;</p>
     <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:100px;height:150px;">
-    <p>&nbsp;</p>
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
     <div class="form-row">
@@ -72,6 +68,12 @@ export default {
   flex-wrap: wrap;
   font-weight: 300;
   font-size: 10px;
+}
+
+img
+{
+  margin-right:10px;
+  padding:0;
 }
 
 </style>>
