@@ -5,17 +5,10 @@
     <p class="welcome_title"> Bonjour {{username}} ! </p>
     <h2 class="card__title2"> Films </h2>
     <br>
-    <img src="../assets/avatar.png" alt="Avatar" style="width:100px;height:150px;">
-    <img src='../assets/avengers.png' alt="Avatar" style="width:100px;height:150px;">
-    <img src='../assets/bladerunner.png' alt="Avatar" style="width:100px;height:150px;">
-    <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:100px;height:150px;">
-    <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
-
     <div class="card-cart-container">
       <div class="card-container">
         <div v-if="films.length">
           <div v-for="(film, index) in filmsData" :key="index" class="card">
-            <h2> {{ film.filmName }} </h2>
             <div class="img-container">
               <img v-bind:src="film.image" alt="">
             </div>
