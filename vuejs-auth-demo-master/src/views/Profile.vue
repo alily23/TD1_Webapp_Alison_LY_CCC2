@@ -15,7 +15,7 @@
       <div v-for="(film, index) in filmsData" :key="index">
         <h2> {{ film.filmName }} </h2>
         <div class="img-container">
-          <img v-bind:src="film.image" alt="">
+          <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
         </div>
         <div class="card-text">
           <h3>{{ film.filmName }}</h3>
