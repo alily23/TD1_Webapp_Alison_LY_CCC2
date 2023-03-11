@@ -5,7 +5,7 @@
     <p class="welcome_title"> Bonjour {{username}} ! </p>
     <h2 class="card__title2"> Films </h2>
     <br>
-    <img src='../assets/avatar.png' alt="Avatar" style="width:100px;height:150px;">
+    <img src="../assets/avatar.png" alt="Avatar" style="width:100px;height:150px;">
     <img src='../assets/avengers.png' alt="Avatar" style="width:100px;height:150px;">
     <img src='../assets/bladerunner.png' alt="Avatar" style="width:100px;height:150px;">
     <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:100px;height:150px;">
