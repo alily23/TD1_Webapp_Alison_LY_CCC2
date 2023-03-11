@@ -11,21 +11,26 @@
     <img src='../assets/tunetueraspoint.png' alt="Avatar" style="width:100px;height:150px;">
     <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
 
-    <div v-if="films.length">
-      <div v-for="(film, index) in filmsData" :key="index">
-        <h2> {{ film.filmName }} </h2>
-        <div class="img-container">
-          <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
+    <div class="card-cart-container">
+      <div class="card-container">
+        <div v-if="films.length">
+          <div v-for="(film, index) in filmsData" :key="index" class="card">
+            <h2> {{ film.filmName }} </h2>
+            <div class="img-container">
+              <img src='../assets/vpourvendetta.png' alt="Avatar" style="width:100px;height:150px;">
+            </div>
+            <div class="card-text">
+              <h3>{{ film.filmName }}</h3>
+              <span> {{ film.note }}</span>
+            </div>
+          </div>
         </div>
-        <div class="card-text">
-          <h3>{{ film.filmName }}</h3>
-          <span> {{ film.note }}</span>
+        <div v-else>
+          Loading...
         </div>
       </div>
     </div>
-    <div v-else>
-      Loading...
-    </div>
+
 
     <div class="form-row">
       <button @click="logout()" class="button">
