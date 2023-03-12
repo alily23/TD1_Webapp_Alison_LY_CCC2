@@ -7,20 +7,18 @@
     <br>
     <div class="card-cart-container">
       <div class="card-container">
-        <div v-if="films.length">
           <div v-for="(film, index) in filmsData" :key="index" class="card">
             <div class="img-container">
-              <img v-bind:src="film.image" alt="">
+              <img v-bind:src=film.image alt="f">
             </div>
             <div class="card-text">
-              <h3>{{ film.filmName }}</h3>
+              <h3> {{ film.filmName }}</h3>
               <span> {{ film.note }}</span>
+              <button @click="display(film)" class="button">
+                En savoir plus
+              </button>
             </div>
           </div>
-        </div>
-        <div v-else>
-          Loading...
-        </div>
       </div>
     </div>
 
@@ -60,7 +58,7 @@ export default {
     }),
   filmsData() {
     if (this.films.length) {
-      return JSON.parse(this.films);
+      return JSON.parse(localStorage.getItem('films'));
     } else {
       return [];
     }
@@ -74,6 +72,18 @@ export default {
 
     create: function () {
       return this.$store.dispatch('films')
+    },
+
+    display: function(film) {
+      console.log("ici")
+      localStorage.setItem('film', film);
+      const self = this;
+      this.$store.dispatch('films', {
+      }).then(function () {
+        self.$router.push('film');
+      }, function (error) {
+        console.log(error);
+      })
     },
 
     /*searchfilm(movie): function() {
@@ -104,6 +114,8 @@ export default {
 
 img
 {
+  width:220px;
+  height:300px;
   margin-right:10px;
   padding:0;
 }

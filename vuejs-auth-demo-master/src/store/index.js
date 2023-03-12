@@ -117,7 +117,7 @@ const store = createStore({
       })
       .catch(function () {
       });
-    }
+    },
   }
 })
 
